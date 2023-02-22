@@ -4,41 +4,37 @@
 # rhel-to-qcow2
 Redhat Enterprise Linux and convert to qcow2 format
 
+* &#9745; rhel8.7 : OK
+* &#9744; rhel9.0 : ssh does not connect
+* &#9744; rhel9.1 : ssh does not connect
+
 # Test
 ```
-qemu.rhel: output will be in this color.
+./build.sh
+qemu.rhel87: output will be in this color.
 
-==> qemu.rhel: Retrieving ISO
-==> qemu.rhel: Trying /root/Downloads/rhel-8.7-x86_64-kvm.qcow2
-==> qemu.rhel: Trying /root/Downloads/rhel-8.7-x86_64-kvm.qcow2?checksum=sha256%3A9b5718977832213cf07dc17a9ba3ad171b21576840064ecf2c395fa7642412d2
-==> qemu.rhel: /root/Downloads/rhel-8.7-x86_64-kvm.qcow2?checksum=sha256%3A9b5718977832213cf07dc17a9ba3ad171b21576840064ecf2c395fa7642412d2 => /root/Downloads/rhel-8.7-x86_64-kvm.qcow2
-    qemu.rhel: File extension already matches desired output format. Skipping qemu-img convert step
-==> qemu.rhel: Resizing hard drive...
-==> qemu.rhel: Starting HTTP server on port 8727
-==> qemu.rhel: Found port for communicator (SSH, WinRM, etc): 3522.
-==> qemu.rhel: Looking for available port between 5900 and 6000 on 127.0.0.1
-==> qemu.rhel: Starting VM, booting disk image
-    qemu.rhel: The VM will be run headless, without a GUI. If you want to
-    qemu.rhel: view the screen of the VM, connect via VNC without a password to
-    qemu.rhel: vnc://127.0.0.1:5990
-==> qemu.rhel: Overriding default Qemu arguments with qemuargs template option...
-==> qemu.rhel: Waiting 3m0s for boot...
-==> qemu.rhel: Connecting to VM via VNC (127.0.0.1:5990)
-==> qemu.rhel: Typing the boot command over VNC...
-    qemu.rhel: Not using a NetBridge -- skipping StepWaitGuestAddress
-==> qemu.rhel: Using SSH communicator to connect: 127.0.0.1
-==> qemu.rhel: Waiting for SSH to become available...
-==> qemu.rhel: Connected to SSH!
-==> qemu.rhel: Gracefully halting virtual machine...
-==> qemu.rhel: Converting hard drive...
-Build 'qemu.rhel' finished after 4 minutes 50 seconds.
-
-==> Wait completed after 4 minutes 50 seconds
-
-==> Builds finished. The artifacts of successful builds are:
---> qemu.rhel: VM files in directory: output
-
-real    4m54.337s
-user    4m3.916s
-sys     0m31.811s
+==> qemu.rhel87: Retrieving ISO
+==> qemu.rhel87: Trying /home/ubuntu/Downloads/rhel-8.7-x86_64-kvm.qcow2
+==> qemu.rhel87: Trying /home/ubuntu/Downloads/rhel-8.7-x86_64-kvm.qcow2?checksum=sha256%3A9b5718977832213cf07dc17a9ba3ad171b21576840064ecf2c395fa7642412d2
+==> qemu.rhel87: /home/ubuntu/Downloads/rhel-8.7-x86_64-kvm.qcow2?checksum=sha256%3A9b5718977832213cf07dc17a9ba3ad171b21576840064ecf2c395fa7642412d2 => /home/ubuntu/Downloads/rhel-8.7-x86_64-kvm.qcow2
+    qemu.rhel87: File extension already matches desired output format. Skipping qemu-img convert step
+==> qemu.rhel87: Resizing hard drive...
+==> qemu.rhel87: Starting HTTP server on port 8648
+==> qemu.rhel87: Found port for communicator (SSH, WinRM, etc): 4292.
+==> qemu.rhel87: Looking for available port between 5900 and 6000 on 127.0.0.1
+==> qemu.rhel87: Starting VM, booting disk image
+    qemu.rhel87: The VM will be run headless, without a GUI. If you want to
+    qemu.rhel87: view the screen of the VM, connect via VNC without a password to
+    qemu.rhel87: vnc://127.0.0.1:5934
+==> qemu.rhel87: Overriding default Qemu arguments with qemuargs template option...
+==> qemu.rhel87: Waiting 3m0s for boot...
+==> qemu.rhel87: Connecting to VM via VNC (127.0.0.1:5934)
+==> qemu.rhel87: Typing the boot commands over VNC...
+    qemu.rhel87: Not using a NetBridge -- skipping StepWaitGuestAddress
+==> qemu.rhel87: Using SSH communicator to connect: 127.0.0.1
+==> qemu.rhel87: Waiting for SSH to become available...
+==> qemu.rhel87: Connected to SSH!
+==> qemu.rhel87: Gracefully halting virtual machine...
+==> qemu.rhel87: Converting hard drive...
+Build 'qemu.rhel87' finished after 3 minutes 48 seconds.
 ```
