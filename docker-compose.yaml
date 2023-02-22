@@ -3,7 +3,7 @@
 #     export IBMCLOUD_API_KEY=<YOURS>   # pragma: allowlist secret
 # Run:
 #   docker-compose run dev-env
-version: "3.3"
+version: "3"
 services:
   dev-env:
     privileged: true
@@ -17,6 +17,7 @@ services:
       - .:/dev-env
       - /var/run/docker.sock:/var/run/docker.sock
       - ~/.gitconfig:/home/ubuntu/.gitconfig:ro
+      - ~/Downloads:/home/ubuntu/Downloads
     environment:
       IBMCLOUD_API_KEY: "$IBMCLOUD_API_KEY"
     working_dir: /dev-env
