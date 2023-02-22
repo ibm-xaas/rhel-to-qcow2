@@ -1,7 +1,7 @@
 source "qemu" "rhel87" {
   headless                  = true
   accelerator               = "hvf"
-  iso_url                   = "/Users/seungyeop/Downloads/rhel-8.7-x86_64-kvm.qcow2"
+  iso_url                   = "/home/ubuntu/Downloads/rhel-8.7-x86_64-kvm.qcow2"
   iso_checksum              = "file:./RHELSHA256SUMS"
   output_directory          = "output"
   shutdown_command          = "rm -f /home/packer/.ssh/authorized_keys && sudo rm -f /root/.ssh/authorized_keys && echo 'packer' | sudo -S shutdown -P now"
@@ -29,7 +29,7 @@ source "qemu" "rhel87" {
 source "qemu" "rhel90" {
   headless                  = true
   accelerator               = "hvf"
-  iso_url                   = "/Users/seungyeop/Downloads/rhel-baseos-9.0-x86_64-kvm.qcow2"
+  iso_url                   = "/home/ubuntu/Downloads/rhel-baseos-9.0-x86_64-kvm.qcow2"
   iso_checksum              = "file:./RHELSHA256SUMS"
   output_directory          = "output"
   shutdown_command          = "rm -f /home/packer/.ssh/authorized_keys && sudo rm -f /root/.ssh/authorized_keys && echo 'packer' | sudo -S shutdown -P now"
@@ -58,7 +58,7 @@ source "qemu" "rhel90" {
 source "qemu" "rhel91" {
   headless                  = true
   accelerator               = "hvf"
-  iso_url                   = "/Users/seungyeop/Downloads/rhel-baseos-9.1-x86_64-kvm.qcow2"
+  iso_url                   = "/home/ubuntu/Downloads/rhel-baseos-9.1-x86_64-kvm.qcow2"
   iso_checksum              = "file:./RHELSHA256SUMS"
   output_directory          = "output"
   shutdown_command          = "rm -f /home/packer/.ssh/authorized_keys && sudo rm -f /root/.ssh/authorized_keys && echo 'packer' | sudo -S shutdown -P now"
