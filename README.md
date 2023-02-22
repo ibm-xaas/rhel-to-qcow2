@@ -1,43 +1,40 @@
-[![pre-commit](https://github.com/ibm-xaas/fedora-to-qcow2/actions/workflows/pre-commit.yml/badge.svg?branch=main)](https://github.com/ibm-xaas/fedora-to-qcow2/actions/workflows/pre-commit.yml)
-# fedora-to-qcow2
-Retrieve fedora 37 and convert to qcow2 format
+[![pre-commit](https://github.com/ibm-xaas/rhel-to-qcow2/actions/workflows/pre-commit.yml/badge.svg?branch=main)](https://github.com/ibm-xaas/rhel-to-qcow2/actions/workflows/pre-commit.yml)
+[![fed-dev-hero](https://images.credly.com/size/220x220/images/2b1a505f-ece9-445b-b830-38ef5141b5a3/IBM-Federated-Developer-Hero.png)](https://www.credly.com/badges/406d727d-0799-4de7-88fe-b0ef2528375a/public_url)
+
+# rhel-to-qcow2
+Redhat Enterprise Linux and convert to qcow2 format
+
+* &#9745; rhel8.7 : OK
+* &#9744; rhel9.0 : ssh does not connect
+* &#9744; rhel9.1 : ssh does not connect
 
 # Test
 ```
-06:01:20 ubuntu@d6c92099ae67 dev-env ±|init|→ ./build.sh
-qemu.fedora37: output will be in this color.
+./build.sh
+qemu.rhel87: output will be in this color.
 
-==> qemu.fedora37: Retrieving ISO
-==> qemu.fedora37: Trying https://download.fedoraproject.org/pub/fedora/linux/releases/37/Cloud/x86_64/images/Fedora-Cloud-Base-37-1.7.x86_64.raw.xz
-==> qemu.fedora37: Trying https://download.fedoraproject.org/pub/fedora/linux/releases/37/Cloud/x86_64/images/Fedora-Cloud-Base-37-1.7.x86_64.raw.xz?checksum=sha256%3A11aefe4f00b7a3845880ca34d1779ec65703c3ee76b450c168f353723b14594e
-    qemu.fedora37: Fedora-Cloud-Base-37-1.7.x86_64.raw.xz 377.31 MiB / 377.31 MiB [=] 100.00% 50s
-==> qemu.fedora37: https://download.fedoraproject.org/pub/fedora/linux/releases/37/Cloud/x86_64/images/Fedora-Cloud-Base-37-1.7.x86_64.raw.xz?checksum=sha256%3A11aefe4f00b7a3845880ca34d1779ec65703c3ee76b450c168f353723b14594e => /home/ubuntu/.cache/packer/561c6eed6a9b863928217d82e252ea9717dd8f2d.iso
-==> qemu.fedora37: Copying hard drive...
-==> qemu.fedora37: Resizing hard drive...
-==> qemu.fedora37: Starting HTTP server on port 8207
-==> qemu.fedora37: Found port for communicator (SSH, WinRM, etc): 3439.
-==> qemu.fedora37: Looking for available port between 5900 and 6000 on 127.0.0.1
-==> qemu.fedora37: Starting VM, booting disk image
-==> qemu.fedora37: Overriding default Qemu arguments with qemuargs template option...
-==> qemu.fedora37: Waiting 3m0s for boot...
-==> qemu.fedora37: Connecting to VM via VNC (127.0.0.1:5938)
-==> qemu.fedora37: Typing the boot commands over VNC...
-    qemu.fedora37: Not using a NetBridge -- skipping StepWaitGuestAddress
-==> qemu.fedora37: Using SSH communicator to connect: 127.0.0.1
-==> qemu.fedora37: Waiting for SSH to become available...
-==> qemu.fedora37: Connected to SSH!
-==> qemu.fedora37: Gracefully halting virtual machine...
-==> qemu.fedora37: Converting hard drive...
-Build 'qemu.fedora37' finished after 10 minutes 26 seconds.
-
-==> Wait completed after 10 minutes 26 seconds
-
-==> Builds finished. The artifacts of successful builds are:
---> qemu.fedora37: VM files in directory: output
-06:12:18 ubuntu@d6c92099ae67 dev-env ±|init|→ ls -al packer/output/
-total 909408
-drwxr-xr-x 3 ubuntu ubuntu         96 Feb 15 06:11 .
-drwxr-xr-x 8 ubuntu ubuntu        256 Feb 15 06:07 ..
--rw-r--r-- 1 ubuntu ubuntu 1015742464 Feb 15 06:11 fedora37
-06:12:30 ubuntu@d6c92099ae67 dev-env ±|init|→
+==> qemu.rhel87: Retrieving ISO
+==> qemu.rhel87: Trying /home/ubuntu/Downloads/rhel-8.7-x86_64-kvm.qcow2
+==> qemu.rhel87: Trying /home/ubuntu/Downloads/rhel-8.7-x86_64-kvm.qcow2?checksum=sha256%3A9b5718977832213cf07dc17a9ba3ad171b21576840064ecf2c395fa7642412d2
+==> qemu.rhel87: /home/ubuntu/Downloads/rhel-8.7-x86_64-kvm.qcow2?checksum=sha256%3A9b5718977832213cf07dc17a9ba3ad171b21576840064ecf2c395fa7642412d2 => /home/ubuntu/Downloads/rhel-8.7-x86_64-kvm.qcow2
+    qemu.rhel87: File extension already matches desired output format. Skipping qemu-img convert step
+==> qemu.rhel87: Resizing hard drive...
+==> qemu.rhel87: Starting HTTP server on port 8648
+==> qemu.rhel87: Found port for communicator (SSH, WinRM, etc): 4292.
+==> qemu.rhel87: Looking for available port between 5900 and 6000 on 127.0.0.1
+==> qemu.rhel87: Starting VM, booting disk image
+    qemu.rhel87: The VM will be run headless, without a GUI. If you want to
+    qemu.rhel87: view the screen of the VM, connect via VNC without a password to
+    qemu.rhel87: vnc://127.0.0.1:5934
+==> qemu.rhel87: Overriding default Qemu arguments with qemuargs template option...
+==> qemu.rhel87: Waiting 3m0s for boot...
+==> qemu.rhel87: Connecting to VM via VNC (127.0.0.1:5934)
+==> qemu.rhel87: Typing the boot commands over VNC...
+    qemu.rhel87: Not using a NetBridge -- skipping StepWaitGuestAddress
+==> qemu.rhel87: Using SSH communicator to connect: 127.0.0.1
+==> qemu.rhel87: Waiting for SSH to become available...
+==> qemu.rhel87: Connected to SSH!
+==> qemu.rhel87: Gracefully halting virtual machine...
+==> qemu.rhel87: Converting hard drive...
+Build 'qemu.rhel87' finished after 3 minutes 48 seconds.
 ```
