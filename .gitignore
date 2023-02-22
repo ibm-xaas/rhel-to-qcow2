@@ -1,0 +1,18 @@
+# Cache objects
+packer_cache/
+
+# Crash log
+crash.log
+
+# For built boxes
+*.box
+
+# pub key
+disk-ssh-pub*.img
+
+# output dir
+**/output/
+
+# user-data
+user-data*
+meta-data*
