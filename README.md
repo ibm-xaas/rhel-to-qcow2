@@ -6,8 +6,8 @@
 Redhat Enterprise Linux and convert to qcow2 format
 
 * &#9745; rhel8.7 : OK
-* &#9744; rhel9.0 : ssh does not connect
-* &#9744; rhel9.1 : ssh does not connect
+* &#9744; rhel9.0 : ssh does not connect, the root cause is kernel panic, requires further investigation
+* &#9744; rhel9.1 : ssh does not connect, the root cause is kernel panic, requires further investigation 
 
 # Test
 ```
