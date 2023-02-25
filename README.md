@@ -7,6 +7,7 @@ Redhat Enterprise Linux and convert to qcow2 format
 
 *Tested and can be built only from Intel based MBP (x86_64) with the accelerator hvf due to rhel9.x deprecated qemu64 cpu model*
 
+* &#9745; rhel8.6 : OK, not necessary to add the accelerator but why not if the rest of them can be built only with the accelerator
 * &#9745; rhel8.7 : OK, not necessary to add the accelerator but why not if the rest of them can be built only with the accelerator
 * &#9745; rhel9.0 : https://bugzilla.redhat.com/show_bug.cgi?id=2060839
 * &#9745; rhel9.1 : https://bugzilla.redhat.com/show_bug.cgi?id=2060839
