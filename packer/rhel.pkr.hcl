@@ -114,6 +114,7 @@ source "qemu" "rhel91" {
 
 build {
   sources = [
+    "source.qemu.rhel86",
     "source.qemu.rhel87",
     "source.qemu.rhel90",
     "source.qemu.rhel91"
